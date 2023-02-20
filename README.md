@@ -1,2 +1,2 @@
 # Gravity-Collision
-Testing JS concepts of gravity and collusion in a game
+Testing JS concepts of gravity and collisions in a game
