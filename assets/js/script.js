@@ -6,7 +6,9 @@
   // Run Game
      myGameArea.start();
      // Player image
-     myGamePiece = new component(30, 30, "red", 10, 120);
+     myGamePiece = new component(140, 10, "blue", 2, 2);
+     greenGamePiece = new component(90, 20, "green", 100, 100);
+     cloudGamePiece = new component(50, 50, "red", 2, 20);
  }
  // Canvas game area
  var myGameArea = {
@@ -39,4 +41,8 @@ function updateGameArea() {
   myGameArea.clear();
   myGamePiece.x += 1;
   myGamePiece.update();
-}
+  greenGamePiece.x += 1;
+  greenGamePiece.update();
+  cloudGamePiece.x += 1;
+  cloudGamePiece.update();
+  }
