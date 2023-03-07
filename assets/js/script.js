@@ -34,7 +34,9 @@
      ctx.fillRect(this.x, this.y, this.width, this.height);
      }   
 }
+// Update the updateGameArea() function every 20th millisecond 
 function updateGameArea() {
   myGameArea.clear();
+  myGamePiece.x += 1;
   myGamePiece.update();
 }
