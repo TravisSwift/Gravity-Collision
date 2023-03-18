@@ -18,6 +18,9 @@
          document.body.insertBefore(this.canvas, document.body.childNodes[0]);
          // Update the updateGameArea() function every 20th millisecond 
          this.interval = setInterval(updateGameArea, 20);
+         window.addEventListener('keydown', function (e) {
+            myGameArea.key = false;
+         })
         },
         clear : function() {
             this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);    
@@ -41,6 +44,7 @@
         this.y += this.speedY;        
     } 
 }
+// Game piece movement
 function updateGameArea() {
     myGameArea.clear();
     myGamePiece.newPos();    
@@ -62,3 +66,8 @@ function moveleft() {
 function moveright() {
     myGamePiece.speedX += 1; 
 }
+
+function stopMove() {
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+  }
